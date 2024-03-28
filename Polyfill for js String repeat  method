@@ -1,0 +1,20 @@
+	  String.prototype.myRepeat = function (count) {
+	    if (this == null) {
+	      throw new TypeError("No String is present");
+	    }
+	    count = +count; //convert string to int
+	    if (count < 0 || count == Infinity) {
+	      throw new RangeError("Invalid count");
+	    }
+	    count = Math.floor(count);
+	    if (this.length == 0 || count == 0) {
+	      return "";
+	    }
+	    let result = "";
+	    while (count) {
+	      result += this;
+	      count--;
+	    }
+	    return result;
+	  };
+  console.log("femf".myRepeat(3));
