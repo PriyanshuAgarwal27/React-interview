@@ -1,0 +1,14 @@
+	compose- function takes any number of functions and invokes them all one after the other. It starts from right to left. 
+	Example
+	const compose = (...fns) => x => fns.reduceRight((y, f) => f(y), x); 
+	const double = x => x * 2
+	const square = x => x * x
+	// function composition
+	var output_final = compose(square, double)(2);
+	console.log(output_final);//16 
+	
+	On the other hand, we can reverse the order of the function invocation by using the pipe function:
+	Example
+	const pipe = (...fns) => x => fns.reduce((y, f) => f(y), x); const double = x => x * 2 const square = x => x * x // function pipe
+	 var output_final = pipe(square, double)(2); 
+	console.log(output_final);//8 
