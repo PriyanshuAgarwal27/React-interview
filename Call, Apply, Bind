@@ -1,0 +1,25 @@
+let name = {
+firstname: "Akshay",
+lastname: "Saini",
+}
+let printFulName = function (hometown, state) {
+console. log(this.firstname + " " + this. lastname + " from " + hometown +", " + : state;
+}
+
+printFullName.call (name, "Dehradun", "Uttarakhand");
+
+let name2 = {
+firstname:
+"Sachin",
+lastname: "Tendulkar",
+}
+
+// function borrowing
+printFulName.call (name2,"Mumbai", "Maharashtra"):
+
+printFullName.apply(name2,["Mumbai", "Maharashtra"]):
+
+// bind method
+let printMyName = printFullName.bind (name, "Mumbai", "Maharashtra"): // does not directly invoke the method but gives the copy of same method. 
+console.log (printMyName);
+printMyName();
