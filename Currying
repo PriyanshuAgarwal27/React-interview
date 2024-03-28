@@ -1,0 +1,2 @@
+ Currying - 
+	we can use it to create partially applied functions that can be reused with different arguments.
