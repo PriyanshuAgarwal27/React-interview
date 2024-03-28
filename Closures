@@ -1,0 +1,24 @@
+Function along with it's lexical scope bundled together is called closures.
+
+function x(){
+  var a = 73
+  function (y){
+    console. log(a):
+  }
+  return y;
+}
+var z = x();
+console.log (z);
+z();
+
+
+// 73
+
+Uses of closures :
+- Module design Pattern
+-Currying
+-Functions like once
+-Memoize
+-Mainting state in aysnc world
+-setTimeout
+-Iterators
