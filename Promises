@@ -1,0 +1,14 @@
+	Promise.all - excecutes multiple promises in parallel. If 1 of the promise is failed it gonna faill the complete Promise.all.
+	Example
+	Promise.all([
+	importantAction ("Roadside Coder"), likeTheVideo("Javascript Interview Questions"), shareTheVideo ("Javascript Interview Questions"),])
+	•then ((res) => { console. log(res);
+	｝）
+	• catch((err) =>
+	console.error("Error:Promises failed", err);
+	});
+	console. log("stop");
+	Promise.race - Only first promise will be resolve. In the above example only importantAction  will be resolved as its timeout is less than the other two.
+	Promise.allSettled - works similar way as promise.all but here If 1 of the promise is failed it still returns all the promises. The failed 1 status will be rejected.
+  Promise.any - It is similar as Promises.race but it will return 1st fulfilled promise. If the promise which has less time get rejected then it will not show error ,
+  it will the second promise which get excecuted. In case of all the promises failed it shows error in console.
